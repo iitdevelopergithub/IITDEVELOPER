@@ -32,6 +32,7 @@ client = TelegramClient(phone, api_id, api_hash)
 async def main():
     # Now you can use all client methods listed below, like for example...
     await client.send_message('me', 'Hello !!!!!')
+	
 
 	
 
@@ -58,7 +59,7 @@ with open(r"members.csv", encoding='UTF-8') as f:  #Enter your file name
 
 chats = []
 last_date = None
-chunk_size = 200
+chunk_size = 1000
 groups = []
 
 result = client(GetDialogsRequest(
@@ -107,7 +108,7 @@ for user in users:
         print("Waiting for 60-180 Seconds...")
         time.sleep(random.randrange(0, 5))
     except PeerFloodError:
-        print("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
+        print("Please wait some second........")
         print("Waiting {} seconds".format(SLEEP_TIME_2))
         time.sleep(SLEEP_TIME_2)
     except UserPrivacyRestrictedError:
