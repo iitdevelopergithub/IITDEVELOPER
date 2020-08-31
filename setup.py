@@ -1,10 +1,6 @@
 #!/bin/env python
 # code by :IIT DEVELOPER
 
-"""
-you can re run setup.py 
-if you have added some wrong value
-"""
 import os, sys
 import configparser
 re="\033[1;31m"
